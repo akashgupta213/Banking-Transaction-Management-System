@@ -1,126 +1,113 @@
-# 🏦 Java Bank Console | JDBC + MySQL Edition
+🏦 Java Banking System | JDBC + MySQL Console Application
 
-## 📋 Overview
-This is a simple **Banking App** developed in Java that allows users to perform basic bank account management operations via a console interface. It connects to a MySQL database to persist account data.
+📋 Overview
 
-### ✨ Key Features:
-- ➕ Add new bank accounts
-- 🔍 View details of a specific account
-- ✏️ Update account information
-- ❌ Delete an account
-- 📜 View all accounts stored in the database
+This is a lightweight Java-based Banking Management System that enables users to perform essential bank account operations through a console interface. The application uses JDBC to connect with a MySQL database for secure data storage and retrieval.
 
-## 📁 Project Structure
-- `BankMain.java` — Main class with the interactive console menu and user input handling.
-- `model.Account` — Java class representing the bank account entity.
-- `service.Service` — Handles database connection and CRUD operations using JDBC.
-## 🏦 Banking App Architecture Diagram
+✨ Key Features:
 
-~~~~
+➕ Create new bank accounts
+
+🔍 Retrieve account details by account number
+
+✏️ Modify customer and balance information
+
+❌ Remove existing accounts
+
+📜 Display all stored bank records
+
+📁 Project Structure
+
+BankMain.java — Entry point of the application with interactive menu handling
+
+model.Account — Model class representing customer account details
+
+service.Service — Manages JDBC connection and database CRUD operations
+
+🏦 System Architecture Diagram
 +------------------+        +-----------------+        +------------------+
 |  BankMain.java   | -----> |   Service.java  | -----> |    MySQL DB      |
-|  (User Interface) |        | (DB Operations) |        |  (bank table)    |
+|  (Console Layer) |        | (JDBC Layer)    |        |   (bank table)   |
 +------------------+        +-----------------+        +------------------+
         |                           ^
         |                           |
         v                           |
 +------------------+                |
 |   Account.java   |----------------+
-| (Account Model)  |
+| (Data Model)     |
 +------------------+
-~~~~
 
-**Explanation:**
 
-- `BankMain.java` handles user interaction via console menus.
-- It calls methods from `Service.java` to perform CRUD operations.
-- `Service.java` connects to the MySQL database to store/retrieve account data.
-- `Account.java` represents the data structure for a bank account.
+Explanation:
 
-## 🛠️ Technologies Used
-- ☕ Java SE
-- 🔌 JDBC for database connectivity
-- 🐬 MySQL database
-- 🖥️ Console-based user interface
+BankMain.java handles user inputs and menu navigation
+Service.java performs database operations using JDBC
+MySQL stores all account records securely
+Account.java defines the bank account entity
 
-## ✅ Prerequisites
-- ☕ Java Development Kit (JDK) installed
-- 🐬 MySQL Server installed and running
-- 📦 MySQL Connector/J (JDBC driver) added to your project dependencies  
-  **Important:** Add the MySQL Connector/J `.jar` file to your project build path to enable database connectivity
-- 🗄️ A database created with the following table:
+##🛠️ Technologies Used
 
-```sql
-CREATE DATABASE DBName;
+☕ Java SE
+🔌 JDBC (Java Database Connectivity)
+🐬 MySQL Database
+🖥️ Console-Based Interface
+✅ Prerequisites
+☕ Java JDK installed
+🐬 MySQL Server running
+📦 MySQL Connector/J added to project build path
 
-USE DBName;
+##🗄️ Database created using the following schema:
+
+CREATE DATABASE banking_system;
+
+USE banking_system;
 
 CREATE TABLE bank (
     acc_number VARCHAR(20) PRIMARY KEY,
     cust_name VARCHAR(100) NOT NULL,
     balance DOUBLE NOT NULL
 );
-```
-## ⚙️ Setup Instructions
 
-### 📥 Clone the repository
+⚙️ Setup Instructions
+📥 Clone the repository
+git clone [https://github.com/yourusername/banking-system.git](https://github.com/akashgupta213/Banking-Transaction-Management-System)
+cd banking-system
 
-```bash
-git clone https://github.com/yourusername/banking-app.git
-cd banking-app
+##🛠️ Configure Database Connection
 
-```
-### 🛠️ Configure Database Connection
+Update credentials inside service.Service:
 
-Open the `service.Service` class and update the following variables with your MySQL credentials and database name:
+String url = "jdbc:mysql://localhost:3306/banking_system";
+String user = "your_username";
+String password = "your_password";
 
-```java
-String url = "jdbc:mysql://localhost:3306/DBName";
-String user = "your_userName";
-String password = "your_mysql_password";
-```
-### 📦 Add MySQL JDBC Driver
+##📦 Add JDBC Driver
 
-Make sure the MySQL Connector/J `.jar` file is included in your project’s build path.
+Ensure MySQL Connector/J .jar file is included in your project libraries.
 
-⚠️ This is important for database connectivity.
-
-### 🚀 Compile and Run the Application
-
-```bash
+##🚀 Run the Application
 javac -d bin src/**/*.java
 java -cp "bin;path_to_mysql_connector.jar" main.BankMain
-```
-*Note:* Replace `path_to_mysql_connector.jar` with the actual path to your MySQL Connector/J jar file.
 
-## 📝 How to Use
+##📝 How to Use
 
-Run the application.
+Launch the application and choose options from the menu to:
+Create accounts
+View account details
+Update records
+Delete accounts
+List all accounts
+Enter the corresponding number and follow prompts.
+Exit using option 6.
 
-You will see a menu with options to:
+##🚀 Future Enhancements
 
-- Add bank accounts
-- View bank accounts
-- Update bank accounts
-- Delete bank accounts
-- List all bank accounts
+Deposit and withdrawal transactions
+Input validation and exception handling
+Web-based version using Spring Boot
+User authentication system
 
-Input your choice as a number and follow the prompts.
+##✍️ Author
 
-The app performs requested operations directly on the MySQL database.
-
-To exit, choose option `6`.
-
-## 🚀 Future Enhancements
-
-- Add transaction management (deposit/withdraw)
-- Implement input validations and exception handling
-- Add a graphical user interface (GUI)
-- Support multiple users with authentication
-
-
-## ✍️ Author
-
-Shruti Parikshit Sangvikar  
-3rd Year Engineering Student
-
+Akash Chandra Gupta
+Computer Science Graduate
