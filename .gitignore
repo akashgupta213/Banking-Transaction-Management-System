@@ -1,0 +1,26 @@
+# === Java Compiled Files ===
+*.class
+
+# === JAR Files (e.g., MySQL Connector) ===
+*.jar
+
+# === Logs and Temp Files ===
+*.log
+*.tmp
+
+# === Eclipse Project Files ===
+.classpath
+.project
+.settings/
+
+# === Build Output Folders ===
+/bin/
+/target/
+
+# === Libraries Folder (if used) ===
+/lib/
+
+# === IntelliJ IDEA Files (optional, for future use) ===
+*.iml
+.idea/
+/out/
