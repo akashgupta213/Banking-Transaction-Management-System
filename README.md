@@ -25,6 +25,7 @@ model.Account — Model class representing customer account details
 service.Service — Manages JDBC connection and database CRUD operations
 
 🏦 System Architecture Diagram
+
 +------------------+        +-----------------+        +------------------+
 |  BankMain.java   | -----> |   Service.java  | -----> |    MySQL DB      |
 |  (Console Layer) |        | (JDBC Layer)    |        |   (bank table)   |
@@ -36,6 +37,7 @@ service.Service — Manages JDBC connection and database CRUD operations
 |   Account.java   |----------------+
 | (Data Model)     |
 +------------------+
+
 
 
 Explanation:
