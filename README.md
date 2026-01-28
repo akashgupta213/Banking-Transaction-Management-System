@@ -23,23 +23,6 @@ BankMain.java — Entry point of the application with interactive menu handling
 model.Account — Model class representing customer account details
 
 service.Service — Manages JDBC connection and database CRUD operations
-
-🏦 System Architecture Diagram
-
-+------------------+        +-----------------+        +------------------+
-|  BankMain.java   | -----> |   Service.java  | -----> |    MySQL DB      |
-|  (Console Layer) |        | (JDBC Layer)    |        |   (bank table)   |
-+------------------+        +-----------------+        +------------------+
-        |                           ^
-        |                           |
-        v                           |
-+------------------+                |
-|   Account.java   |----------------+
-| (Data Model)     |
-+------------------+
-
-
-
 Explanation:
 
 BankMain.java handles user inputs and menu navigation
@@ -80,7 +63,9 @@ cd banking-system
 Update credentials inside service.Service:
 
 String url = "jdbc:mysql://localhost:3306/banking_system";
+
 String user = "your_username";
+
 String password = "your_password";
 
 ##📦 Add JDBC Driver
