@@ -89,10 +89,10 @@ Exit using option 6.
 
 ##🚀 Future Enhancements
 
-Deposit and withdrawal transactions
-Input validation and exception handling
-Web-based version using Spring Boot
-User authentication system
+-Deposit and withdrawal transactions
+-Input validation and exception handling
+-Web-based version using Spring Boot
+-User authentication system
 
 ##✍️ Author
 
