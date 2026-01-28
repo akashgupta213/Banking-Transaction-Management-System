@@ -25,10 +25,10 @@ model.Account — Model class representing customer account details
 service.Service — Manages JDBC connection and database CRUD operations
 Explanation:
 
-BankMain.java handles user inputs and menu navigation
-Service.java performs database operations using JDBC
-MySQL stores all account records securely
-Account.java defines the bank account entity
+-BankMain.java handles user inputs and menu navigation
+-Service.java performs database operations using JDBC
+-MySQL stores all account records securely
+-Account.java defines the bank account entity
 
 ##🛠️ Technologies Used
 
@@ -73,19 +73,19 @@ String password = "your_password";
 Ensure MySQL Connector/J .jar file is included in your project libraries.
 
 ##🚀 Run the Application
-javac -d bin src/**/*.java
-java -cp "bin;path_to_mysql_connector.jar" main.BankMain
+-javac -d bin src/**/*.java
+-java -cp "bin;path_to_mysql_connector.jar" main.BankMain
 
 ##📝 How to Use
 
-Launch the application and choose options from the menu to:
-Create accounts
-View account details
-Update records
-Delete accounts
-List all accounts
-Enter the corresponding number and follow prompts.
-Exit using option 6.
+1.)Launch the application and choose options from the menu to:
+2.)Create accounts
+3.)View account details
+3.)Update records
+4.)Delete accounts
+5.)List all accounts
+6.)Enter the corresponding number and follow prompts.
+7.)Exit using option 6.
 
 ##🚀 Future Enhancements
 
